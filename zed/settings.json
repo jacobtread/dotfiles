@@ -1,0 +1,194 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+    "vim_mode": false,
+    "ui_font_size": 16,
+    "title_bar": {
+        "show_sign_in": false,
+        "show_branch_icon": true,
+        "show_branch_name": true,
+        "show_menus": false,
+        "show_project_items": true,
+        "show_onboarding_banner": false,
+        "show_user_picture": false
+    },
+    "agent": {
+        "enabled": false
+    },
+    "bottom_dock_layout": "right_aligned",
+    // Extensions to automatically install
+    "auto_install_extensions": {
+        "html": true,
+        "toml": true,
+        "dockerfile": true,
+        "svelte": true,
+        "terraform": true,
+        "github-theme": true,
+        "astro": true,
+        "csharp": true,
+        "docker-compose": true,
+        "graphql": true,
+        "bearded-icon-theme": true,
+        "elm": true
+    },
+    "autosave": "off",
+    "restore_on_startup": "last_session",
+    "autoscroll_on_clicks": false,
+    "auto_update": false,
+    "base_keymap": "VSCode",
+    "buffer_font_family": "JetBrains Mono",
+    "buffer_font_weight": 300,
+    "buffer_font_features": {
+        "calt": true
+    },
+    "buffer_font_fallbacks": null,
+    "buffer_font_size": 12,
+    "buffer_line_height": "comfortable",
+    "close_on_file_delete": false,
+    "confirm_quit": false,
+    "current_line_highlight": "all",
+    "selection_highlight": true,
+    "cursor_blink": true,
+    "tabs": {
+        "file_icons": true,
+        "git_status": true,
+        "show_diagnostics": "all"
+    },
+    "toolbar": {
+        "breadcrumbs": true,
+        "code_actions": true
+    },
+    "lsp": {
+        "rust-analyzer": {
+            "initialization_options": {
+                "check": {
+                    // Use the better "clippy" linter over the built in "check"
+                    "command": "clippy"
+                }
+            }
+        },
+        "biome": {
+            "settings": {
+                // Only enable biome when a config file for it is present
+                "require_config_file": true
+            }
+        }
+    },
+    "format_on_save": "on",
+    "formatter": "auto",
+    "languages": {
+        // Run eslint on js/ts/tsx files on format
+        "JavaScript": {
+            // When working in JavaScript specifically I'm often working on legacy or bespoke stuff
+            // and we don't really want to automatically format here, so we trigger this manually
+            // instead
+            "format_on_save": "off",
+            "code_actions_on_format": {
+                "source.fixAll.eslint": true
+            }
+        },
+        "TypeScript": {
+            "code_actions_on_format": {
+                "source.fixAll.eslint": true
+            }
+        },
+        "TSX": {
+            "code_actions_on_format": {
+                "source.fixAll.eslint": true
+            }
+        }
+    },
+    "use_autoclose": true,
+    "git": {
+        "git_gutter": "tracked_files",
+        "gutter_debounce": null,
+        "inline_blame": {
+            "enabled": true
+        }
+    },
+    "indent_guides": {
+        "enabled": true,
+        "line_width": 1,
+        "active_line_width": 1,
+        "coloring": "fixed",
+        "background_coloring": "disabled"
+    },
+    "hard_tabs": false,
+    "multi_cursor_modifier": "alt",
+    "hover_popover_enabled": true,
+    "icon_theme": "Bearded Icon Theme",
+    "inlay_hints": {
+        "enabled": true,
+        "show_type_hints": true,
+        "show_parameter_hints": true,
+        "show_other_hints": true,
+        "show_background": false
+    },
+    "file_finder": {
+        "file_icons": true,
+        "modal_max_width": "small"
+    },
+    "show_completions_on_input": true,
+    "show_completion_documentation": true,
+    "show_edit_predictions": true,
+    "show_whitespaces": "selection",
+    "soft_wrap": "none",
+    "tab_size": 4,
+    "telemetry": {
+        "diagnostics": false,
+        "metrics": false
+    },
+    "terminal": {
+        "dock": "right",
+        "font_family": "JetBrainsMonoNL Nerd Font",
+        "shell": {
+            "program": "nu"
+        },
+        "toolbar": {
+            "breadcrumbs": false
+        },
+        "button": true,
+        "working_directory": "current_project_directory"
+    },
+    "theme": "Github Dark",
+    "project_panel": {
+        "button": true,
+        "default_width": 260,
+        "dock": "left",
+        "entry_spacing": "comfortable",
+        "file_icons": true,
+        "folder_icons": true,
+        "git_status": true,
+        "indent_size": 20,
+        "auto_reveal_entries": true,
+        "auto_fold_dirs": false,
+        "scrollbar": {
+            "show": null
+        },
+        "show_diagnostics": "all",
+        "indent_guides": {
+            "show": "always"
+        },
+        "hide_root": false,
+        "starts_open": true
+    },
+    "debugger": {
+        "button": false
+    },
+    "collaboration_panel": {
+        "button": false
+    },
+    "disable_ai": true,
+    "preview_tabs": {
+        "enabled": false
+    },
+    "git_panel": {
+        "commit_history": true
+    }
+}
