@@ -9,8 +9,8 @@
     {
         "bindings": {
             "shift shift": "file_finder::Toggle",
-            "ctrl-shift-p": "file_finder::Toggle",
-            "ctrl-p": "command_palette::Toggle",
+            "ctrl-p": "file_finder::Toggle",
+            "ctrl-shift-p": "command_palette::Toggle",
             "alt-enter enter": "editor::Format",
             "alt-enter": "editor::ToggleCodeActions",
             "alt-t": "terminal_panel::ToggleFocus",
