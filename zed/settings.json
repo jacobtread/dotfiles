@@ -34,7 +34,8 @@
         "docker-compose": true,
         "graphql": true,
         "bearded-icon-theme": true,
-        "elm": true
+        "elm": true,
+        "emmet": true
     },
     // Don't update automatically
     "auto_update": false,
