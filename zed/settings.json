@@ -35,7 +35,8 @@
         "graphql": true,
         "bearded-icon-theme": true,
         "elm": true,
-        "emmet": true
+        "emmet": true,
+        "cspell": true
     },
     // Don't update automatically
     "auto_update": false,
@@ -118,7 +119,7 @@
         }
     },
     // Nice icon theme with many good file type icons
-    "icon_theme": "Bearded Icon Theme",
+    "icon_theme": "VSCode Icon Theme",
     "inlay_hints": {
         // Inlay hints are nice to see types and parameter names
         "enabled": true
