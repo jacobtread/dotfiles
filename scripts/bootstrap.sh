@@ -12,17 +12,39 @@ else
     echo "include.path already set in ~/.gitconfig"
 fi
 
-# Optional: symlink Zsh config
-ln -sf "$DOTFILES/.zshrc" "$HOME/.zshrc"
-
 # Add sourcing line to the top of ~/.zshrc to load the dotfiles version if not already present
 ZSHRC="$HOME/.zshrc"
-SOURCE_LINE="[ -r \"$DOTFILES/zsh/.zshrc\" ] && source \"$DOTFILES/zsh/.zshrc\""
+SOURCE_LINE="[ -r \"$DOTFILES/.zshrc\" ] && source \"$DOTFILES/.zshrc\""
 
-if ! grep -Fxq "$SOURCE_LINE" "$ZSHRC"; then
-    # Insert at the top
-    sed -i.bak "1i $SOURCE_LINE" "$ZSHRC"
-    echo "Added dotfiles sourcing line to ~/.zshrc (backup at ~/.zshrc.bak)"
-else
-    echo "Dotfiles sourcing line already present in ~/.zshrc"
+# Ensure the file exists
+if [ ! -e "$ZSHRC" ]; then
+    touch "$ZSHRC"
 fi
+
+# Add the source line if it’s not already present
+if ! grep -Fxq "$SOURCE_LINE" "$ZSHRC"; then
+    printf "%s\n%s\n" "$SOURCE_LINE" "$(cat "$ZSHRC")" > "$ZSHRC"
+    echo "Added dotfiles sourcing line to $ZSHRC"
+else
+    echo "Dotfiles sourcing line already present in $ZSHRC"
+fi
+
+ZED_CONFIG="$HOME/.config/zed/settings.json"
+
+if [ -e "$ZED_CONFIG" ] && [ ! -L "$ZED_CONFIG" ]; then
+    mv "$ZED_CONFIG" "${ZED_CONFIG}.bak"
+    echo "Existing Zed config backed up to ${ZED_CONFIG}.bak"
+fi
+
+ln -sf "$DOTFILES/zed/settings.json" "$ZED_CONFIG"
+echo "Zed config symlinked to $ZED_CONFIG"
+
+ZED_KEYMAP="$HOME/.config/zed/keymap.json"
+
+if [ -e "$ZED_KEYMAP" ] && [ ! -L "$ZED_KEYMAP" ]; then
+    mv "$ZED_KEYMAP" "${ZED_KEYMAP}.bak"
+    echo "Existing Zed keymap backed up to ${ZED_KEYMAP}.bak"
+fi
+
+ln -sf "$DOTFILES/zed/keymap.macos.json" "$ZED_KEYMAP"
+echo "Zed keymap symlinked to $ZED_KEYMAP"
