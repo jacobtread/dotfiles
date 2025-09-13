@@ -1,0 +1,6 @@
+[user]
+	email = jacobtread@gmail.com
+	name = jacobtread
+
+[core]
+	editor = zed -w
