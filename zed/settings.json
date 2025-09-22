@@ -36,7 +36,8 @@
         "bearded-icon-theme": true,
         "elm": true,
         "emmet": true,
-        "cspell": true
+        "cspell": true,
+        "xml": true
     },
     // Don't update automatically
     "auto_update": false,
