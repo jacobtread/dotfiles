@@ -13,7 +13,8 @@
             "cmd-shift-p": "command_palette::Toggle",
             "alt-enter enter": "editor::Format",
             "alt-enter": "editor::ToggleCodeActions",
-            "alt-t": "terminal_panel::ToggleFocus",
+            "cmd-t": "terminal_panel::ToggleFocus",
+            "alt-t": "project_symbols::Toggle",
             "cmd-shift-o": "projects::OpenRecent",
             "cmd-d": "editor::DuplicateSelection",
             "F6": "editor::Rename"
@@ -22,8 +23,8 @@
     {
         "context": "Terminal",
         "bindings": {
-            // Hide the terminal when pressing ALT + T while already focused on the terminal
-            "alt-t": "workspace::ToggleRightDock"
+            // Hide the terminal when pressing CMD + T while already focused on the terminal
+            "cmd-t": "workspace::ToggleRightDock"
         }
     },
     {
