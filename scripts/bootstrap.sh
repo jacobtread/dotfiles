@@ -48,3 +48,14 @@ fi
 
 ln -sf "$DOTFILES/zed/keymap.macos.json" "$ZED_KEYMAP"
 echo "Zed keymap symlinked to $ZED_KEYMAP"
+
+
+ZED_TASKS="$HOME/.config/zed/tasks.json"
+
+if [ -e "$ZED_TASKS" ] && [ ! -L "$ZED_TASKS" ]; then
+    mv "$ZED_TASKS" "${ZED_TASKS}.bak"
+    echo "Existing Zed tasks backed up to ${ZED_TASKS}.bak"
+fi
+
+ln -sf "$DOTFILES/zed/tasks.macos.json" "$ZED_TASKS"
+echo "Zed tasks symlinked to $ZED_TASKS"

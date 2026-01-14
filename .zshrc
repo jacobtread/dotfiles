@@ -23,3 +23,7 @@ alias cls="clear"
 
 # "Zed now" open zed in the current folder
 alias zn="zed ."
+
+source $HOME/export-esp.sh
+
+export BINDGEN_EXTRA_CLANG_ARGS="--target=arm64-apple-darwin --sysroot=$(xcrun --show-sdk-path)"

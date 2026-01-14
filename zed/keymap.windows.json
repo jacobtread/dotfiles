@@ -16,20 +16,21 @@
             "alt-t": "terminal_panel::ToggleFocus",
             "ctrl-shift-o": "projects::OpenRecent",
             "ctrl-d": "editor::DuplicateLineDown",
-            "F6": "editor::Rename"
-        }
+            "F6": "editor::Rename",
+            "ctrl-shift-i": ["task::Spawn", { "task_name": "lazygit_log" }],
+        },
     },
     {
         "context": "Terminal",
         "bindings": {
             // Hide the terminal when pressing ALT + T while already focused on the terminal
-            "alt-t": "workspace::ToggleRightDock"
-        }
+            "alt-t": "workspace::ToggleRightDock",
+        },
     },
     {
         "context": "Editor && vim_mode == insert && !menu",
         "bindings": {
             // "j k": "vim::SwitchToNormalMode"
-        }
-    }
+        },
+    },
 ]

@@ -17,20 +17,21 @@
             "alt-t": "project_symbols::Toggle",
             "cmd-shift-o": "projects::OpenRecent",
             "cmd-d": "editor::DuplicateSelection",
-            "F6": "editor::Rename"
-        }
+            "F6": "editor::Rename",
+            "cmd-shift-i": ["task::Spawn", { "task_name": "lazygit_log" }],
+        },
     },
     {
         "context": "Terminal",
         "bindings": {
             // Hide the terminal when pressing CMD + T while already focused on the terminal
-            "cmd-t": "workspace::ToggleRightDock"
-        }
+            "cmd-t": "workspace::ToggleRightDock",
+        },
     },
     {
         "context": "Editor && vim_mode == insert && !menu",
         "bindings": {
             // "j k": "vim::SwitchToNormalMode"
-        }
-    }
+        },
+    },
 ]

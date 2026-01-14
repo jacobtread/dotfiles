@@ -4,3 +4,4 @@
 
 [core]
 	editor = zed -w
+    autocrlf = input

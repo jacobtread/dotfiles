@@ -1,0 +1,8 @@
+[
+    {
+        "label": "lazygit_log",
+        "command": "lazygit -sm full log -w $ZED_WORKTREE_ROOT",
+        "reveal_target": "dock",
+        "hide": "always",
+    },
+]
