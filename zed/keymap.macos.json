@@ -19,6 +19,8 @@
             "cmd-d": "editor::DuplicateSelection",
             "F6": "editor::Rename",
             "cmd-shift-i": ["task::Spawn", { "task_name": "lazygit_log" }],
+            "cmd-shift-u": "editor::InsertUuidV4",
+            "cmd-shift--": "editor::ExpandMacroRecursively",
         },
     },
     {

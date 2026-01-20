@@ -15,9 +15,11 @@
             "alt-enter": "editor::ToggleCodeActions",
             "alt-t": "terminal_panel::ToggleFocus",
             "ctrl-shift-o": "projects::OpenRecent",
-            "ctrl-d": "editor::DuplicateLineDown",
+            "ctrl-d": "editor::DuplicateSelection",
             "F6": "editor::Rename",
             "ctrl-shift-i": ["task::Spawn", { "task_name": "lazygit_log" }],
+            "ctrl-shift-u": "editor::InsertUuidV4",
+            "ctrl-shift--": "editor::ExpandMacroRecursively",
         },
     },
     {
