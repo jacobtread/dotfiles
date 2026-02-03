@@ -7,6 +7,8 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+    "ui_font_weight": 400.0,
+    "redact_private_values": false,
     "ui_font_size": 16,
     "title_bar": {
         "show_sign_in": false,
@@ -37,16 +39,16 @@
         "elm": true,
         "emmet": true,
         "cspell": true,
-        "xml": true,
+        "clean-vscode-icons": true,
     },
     // Don't update automatically
     "auto_update": false,
     // Base the keymap on VSCode
     "base_keymap": "VSCode",
-    // Use Jetbrains mono font for code, has nice ligatures and is overall appealing
+    // Use Jetbrains mono font for code, has nice ligatures and is overall appearling
     "buffer_font_family": "JetBrains Mono",
     // Slightly smaller text size for jetbrains mono font
-    "buffer_font_weight": 300,
+    "buffer_font_weight": 300.0,
     // Enable ligatures for font
     "buffer_font_features": {
         "calt": true,
@@ -70,6 +72,17 @@
     },
     // LSP configurations
     "lsp": {
+        "vtsls": {
+            "settings": {
+                "vtsls": {
+                    "experimental": {
+                        // In some cases fixes the issue of massively long inlay type hints
+                        // doesn't work all the time though
+                        "maxInlayHintLength": 30,
+                    },
+                },
+            },
+        },
         "rust-analyzer": {
             "initialization_options": {
                 "check": {
@@ -94,12 +107,17 @@
             // When working in JavaScript specifically I'm often working on legacy or bespoke stuff
             // and we don't really want to automatically format here, so we trigger this manually
             // instead
-            "format_on_save": "off",
+            // "format_on_save": "off",
             "code_actions_on_format": {
                 "source.fixAll.eslint": true,
             },
         },
         "TypeScript": {
+            "code_actions_on_format": {
+                "source.fixAll.eslint": true,
+            },
+        },
+        "Svelte": {
             "code_actions_on_format": {
                 "source.fixAll.eslint": true,
             },
@@ -137,13 +155,17 @@
         "dock": "right",
         // Jetbrains Mono Nerd Font
         "font_family": "JetBrainsMonoNL Nerd Font",
+        // nushell, I probabbly want to change eventually as I don't use many of its features
+        "shell": {
+            "program": "nu",
+        },
         "toolbar": {
             // Not really useful, only ever shows the path to the terminal?
             "breadcrumbs": false,
         },
     },
     // Nice dark theme
-    "theme": "Github Dark",
+    "theme": "GitHub Dark",
     "project_panel": {
         // Slightly larger projects panel
         "default_width": 260,
@@ -155,10 +177,14 @@
     "debugger": { "button": false },
     // Hide collaboration panel, I don't plan on using it
     "collaboration_panel": { "button": false },
-    // Disable "preview" mode which temporarily opens files unless explicitly pinned
+    // Disable "preview" mode which temporily opens files unless explicitly pinned
     // which I prefer the opposite
     "preview_tabs": {
         "enabled": false,
+    },
+    // Show git history list (Requires https://github.com/zed-industries/zed/pull/35945)
+    "git_panel": {
+        "commit_history": true,
     },
     "scrollbar": {
         // Don't show git diffs in the scrollbar, these end up looking just like they're errors
