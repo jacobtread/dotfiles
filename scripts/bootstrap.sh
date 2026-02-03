@@ -36,7 +36,7 @@ if [ -e "$ZED_CONFIG" ] && [ ! -L "$ZED_CONFIG" ]; then
     echo "Existing Zed config backed up to ${ZED_CONFIG}.bak"
 fi
 
-ln -sf "$DOTFILES/zed/settings.json" "$ZED_CONFIG"
+ln -sf "$DOTFILES/zed/settings.macos.json" "$ZED_CONFIG"
 echo "Zed config symlinked to $ZED_CONFIG"
 
 ZED_KEYMAP="$HOME/.config/zed/keymap.json"

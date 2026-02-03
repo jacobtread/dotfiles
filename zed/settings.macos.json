@@ -1,0 +1,190 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+    "ui_font_weight": 400.0,
+    "redact_private_values": false,
+    "ui_font_size": 16,
+    "title_bar": {
+        "show_sign_in": false,
+        "show_branch_icon": true,
+        "show_branch_name": true,
+        "show_menus": false,
+        "show_project_items": true,
+        "show_onboarding_banner": false,
+        "show_user_picture": false,
+    },
+
+    // Disable AI integrations
+    "agent": { "enabled": false },
+    "disable_ai": true,
+    // Extensions to automatically install
+    "auto_install_extensions": {
+        "html": true,
+        "toml": true,
+        "dockerfile": true,
+        "svelte": true,
+        "terraform": true,
+        "github-theme": true,
+        "astro": true,
+        "csharp": true,
+        "docker-compose": true,
+        "graphql": true,
+        "bearded-icon-theme": true,
+        "elm": true,
+        "emmet": true,
+        "cspell": true,
+        "clean-vscode-icons": true,
+    },
+    // Don't update automatically
+    "auto_update": false,
+    // Base the keymap on VSCode
+    "base_keymap": "VSCode",
+    // Use Jetbrains mono font for code, has nice ligatures and is overall appearling
+    "buffer_font_family": "JetBrains Mono",
+    // Slightly smaller text size for jetbrains mono font
+    "buffer_font_weight": 300.0,
+    // Enable ligatures for font
+    "buffer_font_features": {
+        "calt": true,
+    },
+    // Smaller font size and nice spacing for larger monitor
+    "buffer_font_size": 14,
+    "buffer_line_height": "comfortable",
+    "tabs": {
+        // Show file icon in tab
+        "file_icons": true,
+        // Show git status blip in tab
+        "git_status": true,
+        // Show diagnostics in tab
+        "show_diagnostics": "all",
+    },
+    "toolbar": {
+        // File breadcrumbs path
+        "breadcrumbs": true,
+        // Code actions buttons
+        "code_actions": true,
+    },
+    // LSP configurations
+    "lsp": {
+        "vtsls": {
+            "settings": {
+                "vtsls": {
+                    "experimental": {
+                        // In some cases fixes the issue of massively long inlay type hints
+                        // doesn't work all the time though
+                        "maxInlayHintLength": 30,
+                    },
+                },
+            },
+        },
+        "rust-analyzer": {
+            "initialization_options": {
+                "check": {
+                    // Use the better "clippy" linter over the built in "check"
+                    "command": "clippy",
+                },
+            },
+        },
+        "biome": {
+            "settings": {
+                // Only enable biome when a config file for it is present
+                "require_config_file": true,
+            },
+        },
+    },
+    // Format files when saving
+    "format_on_save": "on",
+    // Language specific configuration
+    "languages": {
+        // Run eslint on js/ts/tsx files on format
+        "JavaScript": {
+            // When working in JavaScript specifically I'm often working on legacy or bespoke stuff
+            // and we don't really want to automatically format here, so we trigger this manually
+            // instead
+            // "format_on_save": "off",
+            "code_actions_on_format": {
+                "source.fixAll.eslint": true,
+            },
+        },
+        "TypeScript": {
+            "code_actions_on_format": {
+                "source.fixAll.eslint": true,
+            },
+        },
+        "Svelte": {
+            "code_actions_on_format": {
+                "source.fixAll.eslint": true,
+            },
+        },
+        "TSX": {
+            "code_actions_on_format": {
+                "source.fixAll.eslint": true,
+            },
+        },
+    },
+    "git": {
+        // Don't show the yellow, red, and green markers in the gutter for git changes
+        // imo this is just confusing and looks like the file has errors when theres
+        // removals and warnings when theres changes
+        "git_gutter": "hide",
+        "inline_blame": {
+            "enabled": true,
+        },
+    },
+    // Nice icon theme with many good file type icons
+    "icon_theme": "Clean VSCode Icon Theme",
+    "inlay_hints": {
+        // Inlay hints are nice to see types and parameter names
+        "enabled": true,
+    },
+    // 4 space tab size
+    "tab_size": 4,
+    // Disable telemetry (My wifi doesn't need more strain)
+    "telemetry": {
+        "diagnostics": false,
+        "metrics": false,
+    },
+    "terminal": {
+        // Terminal docked to the right
+        "dock": "right",
+        // Jetbrains Mono Nerd Font
+        "font_family": "JetBrainsMonoNL Nerd Font",
+        "toolbar": {
+            // Not really useful, only ever shows the path to the terminal?
+            "breadcrumbs": false,
+        },
+    },
+    // Nice dark theme
+    "theme": "GitHub Dark",
+    "project_panel": {
+        // Slightly larger projects panel
+        "default_width": 260,
+        "entry_spacing": "standard",
+        // Don't fold directories
+        "auto_fold_dirs": false,
+    },
+    // Hide the debugger button, I use it very little
+    "debugger": { "button": false },
+    // Hide collaboration panel, I don't plan on using it
+    "collaboration_panel": { "button": false },
+    // Disable "preview" mode which temporily opens files unless explicitly pinned
+    // which I prefer the opposite
+    "preview_tabs": {
+        "enabled": false,
+    },
+    // Show git history list (Requires https://github.com/zed-industries/zed/pull/35945)
+    "git_panel": {
+        "commit_history": true,
+    },
+    "scrollbar": {
+        // Don't show git diffs in the scrollbar, these end up looking just like they're errors
+        // within the file which is not helpful
+        "git_diff": false,
+    },
+}
