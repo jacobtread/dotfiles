@@ -40,6 +40,7 @@
         "emmet": true,
         "cspell": true,
         "clean-vscode-icons": true,
+        "crates-lsp": true,
     },
     // Don't update automatically
     "auto_update": false,
