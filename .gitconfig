@@ -5,3 +5,6 @@
 [core]
 	editor = zed -w
     autocrlf = input
+
+[commit]
+	gpgsign = true
