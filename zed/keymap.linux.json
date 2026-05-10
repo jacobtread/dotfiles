@@ -1,0 +1,37 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+    {
+        "bindings": {
+            "shift shift": "file_finder::Toggle",
+            "ctrl-p": "file_finder::Toggle",
+            "ctrl-shift-p": "command_palette::Toggle",
+            "alt-enter enter": "editor::Format",
+            "alt-enter": "editor::ToggleCodeActions",
+            "alt-t": "terminal_panel::ToggleFocus",
+            "ctrl-shift-o": "projects::OpenRecent",
+            "ctrl-d": "editor::DuplicateSelection",
+            "F6": "editor::Rename",
+            "ctrl-shift-u": "editor::InsertUuidV4",
+            "ctrl-shift--": "editor::ExpandMacroRecursively"
+        }
+    },
+    {
+        "context": "Terminal",
+        "bindings": {
+            // Hide the terminal when pressing ALT + T while already focused on the terminal
+            "alt-t": "workspace::ToggleRightDock"
+        }
+    },
+    {
+        "context": "Editor && vim_mode == insert && !menu",
+        "bindings": {
+            // "j k": "vim::SwitchToNormalMode"
+        }
+    }
+]
