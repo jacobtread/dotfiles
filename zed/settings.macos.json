@@ -7,6 +7,9 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+    "outline_panel": {
+        "dock": "left"
+    },
     "ui_font_weight": 400.0,
     "redact_private_values": false,
     "ui_font_size": 16,
@@ -17,11 +20,11 @@
         "show_menus": false,
         "show_project_items": true,
         "show_onboarding_banner": false,
-        "show_user_picture": false,
+        "show_user_picture": false
     },
 
     // Disable AI integrations
-    "agent": { "enabled": false },
+    "agent": { "dock": "right", "enabled": false },
     "disable_ai": true,
     // Extensions to automatically install
     "auto_install_extensions": {
@@ -40,7 +43,7 @@
         "emmet": true,
         "cspell": true,
         "clean-vscode-icons": true,
-        "crates-lsp": true,
+        "crates-lsp": true
     },
     // Don't update automatically
     "auto_update": false,
@@ -52,7 +55,7 @@
     "buffer_font_weight": 300.0,
     // Enable ligatures for font
     "buffer_font_features": {
-        "calt": true,
+        "calt": true
     },
     // Smaller font size and nice spacing for larger monitor
     "buffer_font_size": 14,
@@ -63,13 +66,13 @@
         // Show git status blip in tab
         "git_status": true,
         // Show diagnostics in tab
-        "show_diagnostics": "all",
+        "show_diagnostics": "all"
     },
     "toolbar": {
         // File breadcrumbs path
         "breadcrumbs": true,
         // Code actions buttons
-        "code_actions": true,
+        "code_actions": true
     },
     // LSP configurations
     "lsp": {
@@ -79,25 +82,25 @@
                     "experimental": {
                         // In some cases fixes the issue of massively long inlay type hints
                         // doesn't work all the time though
-                        "maxInlayHintLength": 30,
-                    },
-                },
-            },
+                        "maxInlayHintLength": 30
+                    }
+                }
+            }
         },
         "rust-analyzer": {
             "initialization_options": {
                 "check": {
                     // Use the better "clippy" linter over the built in "check"
-                    "command": "clippy",
-                },
-            },
+                    "command": "clippy"
+                }
+            }
         },
         "biome": {
             "settings": {
                 // Only enable biome when a config file for it is present
-                "require_config_file": true,
-            },
-        },
+                "require_config_file": true
+            }
+        }
     },
     // Format files when saving
     "format_on_save": "on",
@@ -110,24 +113,24 @@
             // instead
             // "format_on_save": "off",
             "code_actions_on_format": {
-                "source.fixAll.eslint": true,
-            },
+                "source.fixAll.eslint": true
+            }
         },
         "TypeScript": {
             "code_actions_on_format": {
-                "source.fixAll.eslint": true,
-            },
+                "source.fixAll.eslint": true
+            }
         },
         "Svelte": {
             "code_actions_on_format": {
-                "source.fixAll.eslint": true,
-            },
+                "source.fixAll.eslint": true
+            }
         },
         "TSX": {
             "code_actions_on_format": {
-                "source.fixAll.eslint": true,
-            },
-        },
+                "source.fixAll.eslint": true
+            }
+        }
     },
     "git": {
         // Don't show the yellow, red, and green markers in the gutter for git changes
@@ -135,21 +138,21 @@
         // removals and warnings when theres changes
         "git_gutter": "hide",
         "inline_blame": {
-            "enabled": true,
-        },
+            "enabled": true
+        }
     },
     // Nice icon theme with many good file type icons
     "icon_theme": "Clean VSCode Icon Theme",
     "inlay_hints": {
         // Inlay hints are nice to see types and parameter names
-        "enabled": true,
+        "enabled": true
     },
     // 4 space tab size
     "tab_size": 4,
     // Disable telemetry (My wifi doesn't need more strain)
     "telemetry": {
         "diagnostics": false,
-        "metrics": false,
+        "metrics": false
     },
     "terminal": {
         // Terminal docked to the right
@@ -158,34 +161,36 @@
         "font_family": "JetBrainsMonoNL Nerd Font",
         "toolbar": {
             // Not really useful, only ever shows the path to the terminal?
-            "breadcrumbs": false,
-        },
+            "breadcrumbs": false
+        }
     },
     // Nice dark theme
     "theme": "GitHub Dark",
     "project_panel": {
         // Slightly larger projects panel
+        "dock": "left",
         "default_width": 260,
         "entry_spacing": "standard",
         // Don't fold directories
-        "auto_fold_dirs": false,
+        "auto_fold_dirs": false
     },
     // Hide the debugger button, I use it very little
     "debugger": { "button": false },
     // Hide collaboration panel, I don't plan on using it
-    "collaboration_panel": { "button": false },
+    "collaboration_panel": { "dock": "left", "button": false },
     // Disable "preview" mode which temporily opens files unless explicitly pinned
     // which I prefer the opposite
     "preview_tabs": {
-        "enabled": false,
+        "enabled": false
     },
     // Show git history list (Requires https://github.com/zed-industries/zed/pull/35945)
     "git_panel": {
-        "commit_history": true,
+        "dock": "left",
+        "commit_history": true
     },
     "scrollbar": {
         // Don't show git diffs in the scrollbar, these end up looking just like they're errors
         // within the file which is not helpful
-        "git_diff": false,
-    },
+        "git_diff": false
+    }
 }
