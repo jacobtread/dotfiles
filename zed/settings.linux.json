@@ -7,6 +7,9 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+    "outline_panel": {
+        "dock": "left"
+    },
     "ui_font_weight": 400.0,
     "redact_private_values": false,
     "ui_font_size": 16,
@@ -21,7 +24,7 @@
     },
 
     // Disable AI integrations
-    "agent": { "enabled": false },
+    "agent": { "dock": "right", "enabled": false },
     "disable_ai": true,
     // Extensions to automatically install
     "auto_install_extensions": {
@@ -165,16 +168,16 @@
     "theme": "GitHub Dark",
     "project_panel": {
         // Slightly larger projects panel
+        "dock": "left",
         "default_width": 260,
         "entry_spacing": "standard",
         // Don't fold directories
-        "auto_fold_dirs": false,
-        "       dock": "left"
+        "auto_fold_dirs": false
     },
     // Hide the debugger button, I use it very little
     "debugger": { "button": false },
     // Hide collaboration panel, I don't plan on using it
-    "collaboration_panel": { "button": false },
+    "collaboration_panel": { "dock": "left", "button": false },
     // Disable "preview" mode which temporily opens files unless explicitly pinned
     // which I prefer the opposite
     "preview_tabs": {
@@ -182,6 +185,7 @@
     },
     // Show git history list (Requires https://github.com/zed-industries/zed/pull/35945)
     "git_panel": {
+        "dock": "left",
         "commit_history": true
     },
     "scrollbar": {
