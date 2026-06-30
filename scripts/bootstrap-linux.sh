@@ -29,7 +29,11 @@ else
     echo "Dotfiles sourcing line already present in $BASHRC"
 fi
 
-ZED_CONFIG="$HOME/.config/zed/settings.json"
+ZED_CONFIG_PATH="$HOME/.config/zed"
+
+mkdir -p "$ZED_CONFIG_PATH"
+
+ZED_CONFIG="$ZED_CONFIG_PATH/settings.json"
 
 if [ -e "$ZED_CONFIG" ] && [ ! -L "$ZED_CONFIG" ]; then
     mv "$ZED_CONFIG" "${ZED_CONFIG}.bak"
@@ -39,7 +43,7 @@ fi
 ln -sf "$DOTFILES/zed/settings.linux.json" "$ZED_CONFIG"
 echo "Zed config symlinked to $ZED_CONFIG"
 
-ZED_KEYMAP="$HOME/.config/zed/keymap.json"
+ZED_KEYMAP="$ZED_CONFIG_PATH/keymap.json"
 
 if [ -e "$ZED_KEYMAP" ] && [ ! -L "$ZED_KEYMAP" ]; then
     mv "$ZED_KEYMAP" "${ZED_KEYMAP}.bak"
@@ -50,7 +54,7 @@ ln -sf "$DOTFILES/zed/keymap.linux.json" "$ZED_KEYMAP"
 echo "Zed keymap symlinked to $ZED_KEYMAP"
 
 
-ZED_TASKS="$HOME/.config/zed/tasks.json"
+ZED_TASKS="$ZED_CONFIG_PATH/tasks.json"
 
 if [ -e "$ZED_TASKS" ] && [ ! -L "$ZED_TASKS" ]; then
     mv "$ZED_TASKS" "${ZED_TASKS}.bak"
