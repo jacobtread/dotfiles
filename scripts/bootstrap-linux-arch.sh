@@ -63,3 +63,7 @@ fi
 
 ln -sf "$DOTFILES/zed/tasks.linux.json" "$ZED_TASKS"
 echo "Zed tasks symlinked to $ZED_TASKS"
+
+mkdir -p "$HOME/.config"
+ln -sf "$DOTFILES/brave-flags.conf" "$HOME/.config/brave-flags.conf"
+echo "Symlinked brave flags config"
