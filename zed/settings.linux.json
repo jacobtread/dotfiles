@@ -143,7 +143,11 @@
         }
     },
     // Nice icon theme with many good file type icons
-    "icon_theme": "Clean VSCode Icon Theme",
+    "icon_theme": {
+        "mode": "light",
+        "light": "Clean VSCode Icon Theme",
+        "dark": "Clean VSCode Icon Theme"
+    },
     "inlay_hints": {
         // Inlay hints are nice to see types and parameter names
         "enabled": true
@@ -166,7 +170,11 @@
         }
     },
     // Nice dark theme
-    "theme": "GitHub Dark",
+    "theme": {
+        "mode": "light",
+        "light": "GitHub Dark",
+        "dark": "GitHub Light"
+    },
     "project_panel": {
         // Slightly larger projects panel
         "dock": "left",
